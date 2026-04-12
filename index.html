@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Campus Tech Assist</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ICON -->
+  <link rel="icon" type="image/png" href="../Main Picture/mainPic.png">
+
+  
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="animated-bg"></div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="logo">
+    <a href="index.html" class="nav-logo">
+                <img src="../Main Picture/mainPic.png" alt="logo" class="logo-image">
+            </a>
+    <p>Campus Tech Assist</p>
+  </div>
+
+  <div class="section-title">Discover</div>
+
+  <div class="menu">
+        <a class="active" href="./index.html">Home</a>
+        <a href="../CCS Department/ccsDept.html">CCS Department</a>
+        <a href="../Guide Go/guideGo.html">Guide Go</a>
+        <a href="../Tech Tutorial/techTut.html">Tech Tutorial</a>
+        <a href="../Lost and Found/lostnFound.html">Lost and Found</a>
+      </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <div class="header">
+    <h2>HOME</h2>
+    <div class="controls">
+        <div class="search">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Search Campus Tech Assist...">
+        </div>
+    </div>
+  </div>
+
+  <!-- CAROUSEL -->
+    <div class="carousel-container">
+
+      <!-- CRSL BUTTON LEFT -->
+       <button class="crsl-btn"><i class="fas fa-chevron-left"></i></button>
+      
+
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <div class="slide-avatar" style="background-image: url('../UC MVH/ucMission.png');"></div>
+          <div class="slide-name">UC Mission</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="slide-avatar" style="background-image: url('../UC MVH/ucVision.png');"></div>
+          <div class="slide-name">UC Vision</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="slide-avatar" style="background-image: url('../UC MVH/ucGoals.png');"></div>
+          <div class="slide-name">UC Goals</div>
+        </div>
+        
+        
+        <div class="carousel-slide">
+          <div class="slide-avatar" style="background-image: url('../UC MVH/ucHymn.png');"></div>
+          <div class="slide-name">UC Hymn</div>
+        </div>
+      </div>
+      
+<!-- CRSL BUTTON RIGHT -->
+      <button class="crsl-btn2" id = "crsl"><i class="fas fa-chevron-right"></i></button>
+      
+      <div class="carousel-indicators">
+        <button class="indicator active"></button>
+        <button class="indicator"></button>
+        <button class="indicator"></button>
+        <button class="indicator"></button>
+      </div>
+    </div>
+
+</div>
+
+<!-- Lightbox Container -->
+<div id="image-lightbox" style="display: none;">
+  <div class="lightbox-overlay">
+    <div class="lightbox-content">
+      <span class="lightbox-close"><i class="fa fa-times"></i></span>
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+</div>
+
+  <!-- JS -->
+<script src="script.js"></script>
+<script src="../Search/carousel.js"></script>
+
+
+</body>
+</html>
