@@ -661,5 +661,44 @@ option {
   }
 }
 .custom-alert {
-  display: none;
+  position: fixed;
+  top: 8%;
+  right: 20%;
+  left: 20%;
+  background: linear-gradient(90deg, #6d4194, #ffb300);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s ease;
+
+  z-index: 9999;
+
+  display: block;
+}
+
+.custom-alert.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SHOW STATE */
+.custom-alert.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ERROR VERSION */
+.custom-alert.error {
+  background: linear-gradient(90deg, #ff4d4d, #b71c1c);
+}
+
+/* WARNING VERSION */
+.custom-alert.warning {
+  background: linear-gradient(90deg, #ffb300, #ff6f00);
 }
