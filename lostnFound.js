@@ -171,3 +171,23 @@ document.addEventListener("DOMContentLoaded", () => {
       fileInput.files.length > 0 ? fileInput.files[0].name : "No file chosen";
   });
 });
+// ================= SECTION NAVIGATION =================
+function showSection(sectionId) {
+  const sections = document.querySelectorAll(".content-section");
+
+  sections.forEach((sec) => {
+    sec.classList.remove("active");
+  });
+
+  const target = document.getElementById(sectionId);
+  if (target) target.classList.add("active");
+
+  // highlight active menu
+  const links = document.querySelectorAll(".menu a");
+  links.forEach((link) => link.classList.remove("active"));
+
+  // FIX: get clicked element safely
+  if (event && event.target) {
+    event.target.classList.add("active");
+  }
+}
