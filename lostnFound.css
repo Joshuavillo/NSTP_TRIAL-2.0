@@ -212,6 +212,17 @@ body {
   border-radius: 10px;
   margin-bottom: 8px;
 }
+#fileName {
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  opacity: 0.85;
+
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .item-card h4 {
   font-size: 15px;
