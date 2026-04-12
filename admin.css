@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 20%, #7f3aa1, transparent 40%),
+    radial-gradient(circle at 90% 80%, #5416b5, transparent 50%),
+    radial-gradient(circle at 50% 50%, #430a6fa0, transparent 60%),
+    linear-gradient(rgba(255, 255, 255, 0.153) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.151) 1px, transparent 1px),
+    #0c0516;
+
+  background-size:
+    auto,
+    auto,
+    auto,
+    40px 40px,
+    40px 40px,
+    auto;
+
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  margin: 24px 0 10px 0;
+  text-transform: uppercase;
+}
+
+h2:first-of-type {
+  margin-top: 0;
+}
+
+/* ── Table card ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 13px;
+}
+
+th {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-weight: 600;
+}
+
+th,
+td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 14px;
+  text-align: center;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ── Empty state message ── */
+td[colspan] {
+  color: #888;
+  font-style: italic;
+  padding: 20px;
+}
+
+/* ── Profile picture in table ── */
+td img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+/* ── Buttons ── */
+button {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #804a8a;
+  color: white;
+  font-size: 13px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* ── Status badges ── */
+.badge {
+  display: inline-block;
+  background: #804a8a;
+  color: white;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  min-width: 22px;
+  text-align: center;
+}
+
+.badge.zero {
+  background: #c9a8d4;
+}

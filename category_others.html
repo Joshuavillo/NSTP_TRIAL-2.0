@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost and Found | Campus Tech Assist</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="category_others.css">
+
+   <!-- ICON -->
+   <link rel="icon" type="text/css" href="../Main Picture/mainPic.png">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="logo">
+    <a href="../Home/index.html" class="nav-logo">
+                <img src="../Main Picture/mainPic.png" alt="logo" class="logo-image">
+            </a>
+    <p>Campus Tech Assist</p>
+  </div>
+
+  <div class="section-title">Discover</div>
+
+  <div class="menu">
+    <a href="../Home/index.html">Home</a>
+    <a href="../CCS Department/ccsDept.html">CCS Department</a>
+    <a href="../Guide Go/guideGo.html">Guide Go</a>
+    <a href="../Tech Tutorial/techTut.html">Tech Tutorial</a>
+    <a class="active" href="../Lost and Found/lostnFound.html">Lost and Found</a>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+ 
+<div class="main">
+  <div class="header">
+    <div class="back-button">
+    <h2><a href="lostnFound.html"><i class="fa-regular fa-circle-left"></i>
+  </a>
+</h2> 
+    </div>
+    <h2>LOST AND FOUND</h2>
+    <div class="search">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Search Campus Tech Assist...">
+    </div>
+  </div>  
+
+  <!-- ITEMS SECTION -->
+  <h2 id="categoryTitle">Others</h2>
+  <div id="othersContainer" class="items-container">
+  </div>
+
+  <!-- Modal Overlay -->
+<div class="modal-overlay" id="itemModal" onclick="closeModalOnBg(event)">
+  <div class="modal-box">
+    <div class="modal-content">
+      <img id="modal-img" src="" alt="">
+      <div class="modal-details">
+      </div>
+      <div class="box">
+        <p class="item-area" id="modal-location"></p>
+        <p id="modal-comments"></p>
+        <p class="comments-label"></p> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="category_others.js"></script>
+</body>
+</html>
