@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("FORM DATA:", { name, location, status, date, category });
 
     if (!name || !location || !date) {
-      alert("Please fill all required fields!");
+      showAlert("Please fill all required fields!");
       return;
     }
 
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         console.log("Saved to Firebase!");
-        alert("Saved successfully!");
+        showAlert("Saved successfully! Thank you for reporting.");
 
         // clear form
         document.getElementById("itemName").value = "";
@@ -138,7 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("itemImage").value = "";
       };
 
-      // 🟡 IF IMAGE EXISTS → CONVERT TO BASE64
       if (file) {
         const reader = new FileReader();
 
@@ -190,4 +189,18 @@ function showSection(sectionId) {
   if (event && event.target) {
     event.target.classList.add("active");
   }
+}
+
+function showAlert(message, type = "success") {
+  const alertBox = document.getElementById("customAlert");
+
+  alertBox.textContent = message;
+  alertBox.className = "custom-alert show"; // reset
+
+  if (type === "error") alertBox.classList.add("error");
+  if (type === "warning") alertBox.classList.add("warning");
+
+  setTimeout(() => {
+    alertBox.classList.remove("show");
+  }, 3000);
 }
