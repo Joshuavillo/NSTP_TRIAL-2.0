@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Tutorial | Campus Tech Assist</title>
+  <link rel="stylesheet" href="techTut.css">
+  <link rel="icon" type="text/css" href="../Main Picture/mainPic.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+  <!-- SIDEBAR (same as before) -->
+<div class="sidebar">
+  <div class="logo">
+    <a href="../Home/index.html" class="nav-logo">
+      <img src="../Main Picture/mainPic.png" alt="logo" class="logo-image">
+    </a>
+    <p>Campus Tech Assist</p>
+  </div>
+  <div class="section-title">Discover</div>
+  <div class="menu">
+    <a href="../Home Page/index.html">Home</a>
+    <a href="../CCS Department/ccsDept.html">CCS Department</a>
+    <a href="../Guide Go/guideGo.html">Guide Go</a>
+    <a class="active" href="../Tech Tutorial/techTut.html">Tech Tutorial</a>
+    <a href="../Lost and Found/lostnFound.html">Lost and Found</a>
+  </div>
+</div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="header">
+      <h2>TECH TUTORIALS</h2>
+      <div class="controls">
+        <div class="search-container">
+          <i class="fa fa-search"></i>
+          <input type="text" id="tutorialSearch" placeholder="Search tutorials...">
+        </div>
+        <select id="languageFilter">
+          <option value="">All Languages</option>
+        </select>
+        <select id="levelFilter">
+          <option value="">All Levels</option>
+        </select>
+        <button id="clearFilters" class="clear-btn">Clear</button>
+      </div>
+    </div>
+
+    <!-- MASONRY GRID -->
+    <div class="tutorials-grid" id="tutorialsGrid">
+      <!-- Dynamic content -->
+    </div>
+  </div>
+
+  <!-- VIDEO MODAL -->
+  <div id="videoModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <iframe id="modalVideo" allowfullscreen></iframe>
+      <div class="modal-meta">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <a id="modalLink" href="#" target="_blank">Watch Full Video →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="../cache-bust.js"></script>
+  <script src="../Home/searchIndex.js"></script>
+  <script src="../Home/globalSearch.js"></script>
+  <script src="techTutorials.js"></script>
+  <script src="techTut.js"></script>
+
+</body>
+</html>
