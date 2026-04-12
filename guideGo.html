@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide GO | Campus Tech Assist</title>
+
+  <!-- CSS -->
+<link rel="stylesheet" href="./guideGo.css">
+
+<!-- ICON -->
+<link rel="icon" type="text/css" href="../Main Picture/mainPic.png">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="logo">
+    <a href="../Home/index.html" class="nav-logo">
+                <img src="../Main Picture/mainPic.png" alt="logo" class="logo-image">
+            </a>
+    <p>Campus Tech Assist</p>
+  </div>
+
+  <div class="section-title">Discover</div>
+
+  <div class="menu">
+    <a href="../Home Page/index.html">Home</a>
+    <a href="../CCS Department/ccsDept.html">CCS Department</a>
+    <a class="active" href="../Guide Go/guideGo.html">Guide Go</a>
+    <a href="../Tech Tutorial/techTut.html">Tech Tutorial</a>
+    <a href="../Lost and Found/lostnFound.html">Lost and Found</a>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <div class="header">
+    <h2>Guide GO</h2>
+    <div class="search">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Search Campus Tech Assist...">
+    </div>
+  </div>
+
+  <!-- IMAGE GRID -->
+  <section class="image-grid-container">
+    <h2 style="font-size: 2.5em; margin-bottom: 30px; text-align: center;">Guide Gallery</h2>
+    <div class="image-grid" id="imageGrid">
+      <!-- Grid items populated by JS -->
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-left">
+        <img id="modalImage" src="" alt="Grid Image">
+      </div>
+      <div class="modal-right">
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-details" id="modalDetails"></div>
+        <div class="modal-nav">
+          <button id="prevImage" class="nav-btn"><i class="fa fa-chevron-left"></i></button>
+          <button id="nextImage" class="nav-btn"><i class="fa fa-chevron-right"></i></button>
+          <button id="closeModal" class="close-btn">&times;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- JS -->
+<script src="../Home/searchIndex.js"></script>
+<script src="../Home/globalSearch.js"></script>
+<script src="./guideGo.js"></script>
+<script src="./data.js"></script>
+</body>
+</html>
