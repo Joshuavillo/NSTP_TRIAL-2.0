@@ -84,6 +84,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!addBtn || !modal || !saveBtn) return;
 
+  // ================= DATE INPUT ENHANCEMENT =================
+  const dateInput = document.getElementById("date");
+  if (dateInput) {
+    dateInput.addEventListener('focus', function() {
+      this.showPicker(); // Opens date picker on focus (modern browsers)
+    });
+
+    dateInput.addEventListener('change', function() {
+      const wrapper = this.closest('.date-wrapper');
+      const placeholder = wrapper.querySelector('.date-placeholder');
+      
+      if (this.value) {
+        placeholder.style.display = 'none';
+      } else {
+        placeholder.style.display = 'block';
+      }
+    });
+  }
+
   // OPEN
   addBtn.addEventListener("click", () => {
     modal.classList.add("show");
@@ -115,7 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       console.log("Saving to Firebase...");
 
-      // 🟢 FUNCTION TO SAVE DATA
       const saveData = async (imageData) => {
         await addDoc(collection(db, "reports"), {
           itemName: name,
