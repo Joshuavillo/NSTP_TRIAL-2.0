@@ -472,6 +472,7 @@ option {
 
 /* ADD THIS */
 /* 🔥 BULLETPROOF DATE INPUT - REPLACE YOUR EXISTING DATE CSS */
+/* 🔥 FIXED DATE INPUT */
 .date-wrapper {
   position: relative;
   width: 100%;
@@ -484,45 +485,14 @@ option {
   border: 2px solid rgba(255, 255, 255, 0.2);
   outline: none;
   font-size: 14px;
-  background: rgba(255, 255, 255, 0.95) !important;
-  color: #333 !important;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333; /* always visible */
   position: relative;
   z-index: 2;
   cursor: pointer;
 }
 
-/* Hide date text when empty */
-
-
-.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit {
-  color: transparent !important;
-}
-
-.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit-fields-wrapper {
-  color: transparent !important;
-}
-
-.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit-text {
-  color: transparent !important;
-}
-
-.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit-month-field {
-  color: transparent !important;
-}
-
-.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit-day-field {
-  color: transparent !important;
-}
-
-.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit-year-field {
-  color: transparent !important;
-}
-
-/* Show date text when valid */
-.date-wrapper input[type="date"]:valid {
-  color: #333 !important;
-}
-
+/* Placeholder */
 .date-placeholder {
   position: absolute;
   top: 50%;
@@ -535,16 +505,13 @@ option {
   transition: all 0.2s ease;
 }
 
-/* Hide placeholder when date selected */
-.date-wrapper input[type="date"]:valid ~ .date-placeholder {
-  display: none !important;
+/* FIXED selector (+ instead of ~) */
+.date-wrapper input[type="date"]:focus + .date-placeholder,
+.date-wrapper input[type="date"]:valid + .date-placeholder {
+  opacity: 0;
 }
 
-.date-wrapper input[type="date"]:focus ~ .date-placeholder {
-  display: none !important;
-}
-
-/* Calendar icon styling */
+/* Calendar icon */
 .date-wrapper input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0.7;
   cursor: pointer;
@@ -554,7 +521,6 @@ option {
 .date-wrapper input[type="date"]::-webkit-calendar-picker-indicator:hover {
   opacity: 1;
 }
-
 .modal-content button#saveItem {
   padding: 10px;
   border: none;
@@ -783,27 +749,4 @@ option {
 /* WARNING VERSION */
 .custom-alert.warning {
   background: linear-gradient(90deg, #ffb300, #ff6f00);
-}
-/* 🔥 MOBILE TEXT + FORM FIX */
-body {
-  color: white;
-  -webkit-text-size-adjust: 100%;
-}
-
-input,
-select,
-textarea {
-  color: #000;
-  background: #fff;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-option {
-  color: #000;
-  background: #fff;
-}
-
-input, select {
-  -webkit-text-fill-color: #000;
 }
