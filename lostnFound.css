@@ -471,24 +471,36 @@ option {
 }
 
 /* ADD THIS */
-.modal-content input[type="date"] {
+.date-wrapper {
+  position: relative;
   width: 100%;
-  display: block;
-  background: #ffffff;
-  color: #000000;
- 
-  -webkit-text-fill-color: #010101;
-  min-height: 40px;
-}
-.modal-content input[type="date"]::-webkit-datetime-edit {
-  color: #020202;
-  -webkit-text-fill-color: #333;
 }
 
-.modal-content input[type="date"]::-webkit-date-and-time-value {
+.date-wrapper input[type="date"] {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.9);
+  color: transparent;
+}
+
+.date-wrapper input[type="date"]:valid {
   color: #333;
-  -webkit-text-fill-color: #000000;
-  text-align: left;
+}
+
+.date-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.date-wrapper input[type="date"]:valid ~ .date-placeholder {
+  display: none;
 }
 .modal-content button#saveItem {
   padding: 10px;
