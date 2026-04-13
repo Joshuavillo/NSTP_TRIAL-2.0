@@ -470,6 +470,16 @@ option {
   cursor: pointer;
 }
 
+/* ADD THIS */
+.modal-content input[type="date"] {
+  width: 100%;
+  display: block;
+  color: #333;
+  color-scheme: light;
+  -webkit-text-fill-color: #333;
+  min-height: 40px;
+}
+
 .modal-content button#saveItem {
   padding: 10px;
   border: none;
