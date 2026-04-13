@@ -492,9 +492,7 @@ option {
 }
 
 /* Hide date text when empty */
-.date-wrapper input[type="date"]:invalid {
-  color: transparent !important;
-}
+
 
 .date-wrapper input[type="date"]:invalid::-webkit-datetime-edit {
   color: transparent !important;
