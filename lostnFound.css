@@ -479,7 +479,16 @@ option {
   -webkit-text-fill-color: #333;
   min-height: 40px;
 }
+.modal-content input[type="date"]::-webkit-datetime-edit {
+  color: #333;
+  -webkit-text-fill-color: #333;
+}
 
+.modal-content input[type="date"]::-webkit-date-and-time-value {
+  color: #333;
+  -webkit-text-fill-color: #333;
+  text-align: left;
+}
 .modal-content button#saveItem {
   padding: 10px;
   border: none;
