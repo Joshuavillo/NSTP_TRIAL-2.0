@@ -85,23 +85,32 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!addBtn || !modal || !saveBtn) return;
 
   // ================= DATE INPUT ENHANCEMENT =================
-  const dateInput = document.getElementById("date");
-  if (dateInput) {
-    dateInput.addEventListener('focus', function() {
-      this.showPicker(); // Opens date picker on focus (modern browsers)
-    });
+const dateInput = document.getElementById("date");
 
-    dateInput.addEventListener('change', function() {
-      const wrapper = this.closest('.date-wrapper');
-      const placeholder = wrapper.querySelector('.date-placeholder');
-      
-      if (this.value) {
-        placeholder.style.display = 'none';
-      } else {
-        placeholder.style.display = 'block';
-      }
-    });
+if (dateInput) {
+  const wrapper = dateInput.closest('.date-wrapper');
+  const placeholder = wrapper.querySelector('.date-placeholder');
+
+  // show picker
+  dateInput.addEventListener('focus', function () {
+    this.showPicker();
+  });
+
+  // toggle placeholder
+  function updatePlaceholder() {
+    if (dateInput.value) {
+      placeholder.style.opacity = '0';
+    } else {
+      placeholder.style.opacity = '1';
+    }
   }
+
+  dateInput.addEventListener('change', updatePlaceholder);
+  dateInput.addEventListener('blur', updatePlaceholder);
+
+  // run once on load
+  updatePlaceholder();
+}
 
   // OPEN
   addBtn.addEventListener("click", () => {
@@ -141,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
           itemType: status,
           date: date,
           category: category,
-          image: imageData, // 🔥 image saved here
+          image: imageData,
           status: "pending",
           createdAt: new Date(),
         });
