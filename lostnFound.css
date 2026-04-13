@@ -471,6 +471,7 @@ option {
 }
 
 /* ADD THIS */
+/* ADD THIS - FIXED DATE INPUT */
 .date-wrapper {
   position: relative;
   width: 100%;
@@ -478,29 +479,51 @@ option {
 
 .date-wrapper input[type="date"] {
   width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333 !important; /* Make text visible */
   position: relative;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.9);
-  color: transparent;
 }
 
-.date-wrapper input[type="date"]:valid {
-  color: #333;
+.date-wrapper input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 .date-placeholder {
   position: absolute;
   top: 50%;
-  left: 10px;
+  left: 12px;
   transform: translateY(-50%);
   color: rgba(0, 0, 0, 0.45);
   font-size: 14px;
   pointer-events: none;
   z-index: 1;
+  transition: all 0.2s ease;
 }
 
-.date-wrapper input[type="date"]:valid ~ .date-placeholder {
+/* Hide placeholder when date is selected */
+.date-wrapper input[type="date"]:valid ~ .date-placeholder,
+.date-wrapper input[type="date"]:focus ~ .date-placeholder {
   display: none;
+}
+
+/* Style for empty date input */
+.date-wrapper input[type="date"]:invalid {
+  color: transparent;
+}
+
+.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+
+.date-wrapper input[type="date"]:focus {
+  color: #333 !important;
 }
 .modal-content button#saveItem {
   padding: 10px;
