@@ -474,6 +474,7 @@ option {
 .modal-content input[type="date"] {
   width: 100%;
   display: block;
+  background: #ffffff;
   color: #333;
   color-scheme: light;
   -webkit-text-fill-color: #333;
