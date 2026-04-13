@@ -67,8 +67,11 @@
           </select>
 
           <input type="text" id="itemLocation" placeholder="Location" />
-          <input type="date" id="date" />
-          
+          <div class="date-wrapper">
+            <input type="date" id="date" />
+            <span class="date-placeholder" id="datePlaceholder">📅 Select Date</span>
+          </div>
+
           <select id="category">
             <option value="wallet">Wallet</option>
             <option value="phone">Phone</option>
