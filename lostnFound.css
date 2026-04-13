@@ -471,7 +471,7 @@ option {
 }
 
 /* ADD THIS */
-/* ADD THIS - FIXED DATE INPUT */
+/* 🔥 BULLETPROOF DATE INPUT - REPLACE YOUR EXISTING DATE CSS */
 .date-wrapper {
   position: relative;
   width: 100%;
@@ -479,20 +479,50 @@ option {
 
 .date-wrapper input[type="date"] {
   width: 100%;
-  padding: 10px;
+  padding: 12px 10px;
   border-radius: 10px;
-  border: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   outline: none;
   font-size: 14px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #333 !important; /* Make text visible */
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #333 !important;
   position: relative;
   z-index: 2;
+  cursor: pointer;
 }
 
-.date-wrapper input[type="date"]::-webkit-calendar-picker-indicator {
-  cursor: pointer;
-  opacity: 0.7;
+/* Hide date text when empty */
+.date-wrapper input[type="date"]:invalid {
+  color: transparent !important;
+}
+
+.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit {
+  color: transparent !important;
+}
+
+.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit-fields-wrapper {
+  color: transparent !important;
+}
+
+.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit-text {
+  color: transparent !important;
+}
+
+.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit-month-field {
+  color: transparent !important;
+}
+
+.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit-day-field {
+  color: transparent !important;
+}
+
+.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit-year-field {
+  color: transparent !important;
+}
+
+/* Show date text when valid */
+.date-wrapper input[type="date"]:valid {
+  color: #333 !important;
 }
 
 .date-placeholder {
@@ -500,31 +530,33 @@ option {
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-  color: rgba(0, 0, 0, 0.45);
+  color: rgba(51, 51, 51, 0.6);
   font-size: 14px;
   pointer-events: none;
   z-index: 1;
   transition: all 0.2s ease;
 }
 
-/* Hide placeholder when date is selected */
-.date-wrapper input[type="date"]:valid ~ .date-placeholder,
+/* Hide placeholder when date selected */
+.date-wrapper input[type="date"]:valid ~ .date-placeholder {
+  display: none !important;
+}
+
 .date-wrapper input[type="date"]:focus ~ .date-placeholder {
-  display: none;
+  display: none !important;
 }
 
-/* Style for empty date input */
-.date-wrapper input[type="date"]:invalid {
-  color: transparent;
+/* Calendar icon styling */
+.date-wrapper input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.7;
+  cursor: pointer;
+  padding: 5px;
 }
 
-.date-wrapper input[type="date"]:invalid::-webkit-datetime-edit {
-  color: transparent;
+.date-wrapper input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
 }
 
-.date-wrapper input[type="date"]:focus {
-  color: #333 !important;
-}
 .modal-content button#saveItem {
   padding: 10px;
   border: none;
@@ -753,4 +785,27 @@ option {
 /* WARNING VERSION */
 .custom-alert.warning {
   background: linear-gradient(90deg, #ffb300, #ff6f00);
+}
+/* 🔥 MOBILE TEXT + FORM FIX */
+body {
+  color: white;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+select,
+textarea {
+  color: #000;
+  background: #fff;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+option {
+  color: #000;
+  background: #fff;
+}
+
+input, select {
+  -webkit-text-fill-color: #000;
 }
