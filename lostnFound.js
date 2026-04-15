@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
     dateInput.addEventListener("change", function () {
       const wrapper = this.closest(".date-wrapper");
       const placeholder = wrapper.querySelector(".date-placeholder");
-
-     
+    });
+  }
 
   // OPEN
   addBtn.addEventListener("click", () => {
@@ -193,11 +193,11 @@ function showSection(sectionId) {
   const target = document.getElementById(sectionId);
   if (target) target.classList.add("active");
 
-  // highlight active menu
+  
   const links = document.querySelectorAll(".menu a");
   links.forEach((link) => link.classList.remove("active"));
 
-  // FIX: get clicked element safely
+  
   if (event && event.target) {
     event.target.classList.add("active");
   }
