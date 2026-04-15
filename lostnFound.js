@@ -95,13 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const wrapper = this.closest(".date-wrapper");
       const placeholder = wrapper.querySelector(".date-placeholder");
 
-      if (this.value) {
-        placeholder.style.display = "none";
-      } else {
-        placeholder.style.display = "block";
-      }
-    });
-  }
+     
 
   // OPEN
   addBtn.addEventListener("click", () => {
